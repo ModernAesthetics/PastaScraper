@@ -96,16 +96,16 @@ def main():
         paste_ids.pop(0)
 
     # start 60 second loop
-    status("Hibernating for 60 seconds...")
+    status(termcolor.colored("Hibernating for 30 seconds...", "white", "on_red"))
     print()
-    threading.Timer(60, main).start()
+    threading.Timer(30, main).start()
 
 
 if __name__ == '__main__':
 
-    AUTHOR = "SYRAPT0R"
+    AUTHOR = "ModernAesthetics"
     COPYRIGHT = "2019-2020"
-    VERSION = "0.4.4"
+    VERSION = "0.4.5"
 
     status("STARTING PASTA SCRAPER {0}, (c) {1} {2}".format(VERSION, COPYRIGHT, AUTHOR))
     print()
@@ -131,7 +131,7 @@ if __name__ == '__main__':
         f = open("runfile", "w+", encoding='utf-8')
         f.close()
     else:
-        status("Running in infinite mode...")
+        status(termcolor.colored("Running in infinite mode...", "white", "on_magenta"))
 
     if args.keywords is not None:
         f = open(args.keywords)
